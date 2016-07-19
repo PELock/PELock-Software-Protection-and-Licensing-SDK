@@ -1,0 +1,27 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmMain','FORMDATA',[
+  'TPF0'#8'TfrmMain'#7'frmMain'#4'Left'#3#7#1#6'Height'#3#10#1#3'Top'#3#186#0#5
+  +'Width'#3'$'#1#11'BorderIcons'#11#12'biSystemMenu'#0#11'BorderStyle'#7#8'bsD'
+  +'ialog'#7'Caption'#6#16'PELock Przyk'#197#130'ad'#12'ClientHeight'#3#10#1#11
+  +'ClientWidth'#3'$'#1#8'OnCreate'#7#10'FormCreate'#8'Position'#7#15'poDesktop'
+  +'Center'#10'LCLVersion'#6#6'0.9.30'#0#9'TGroupBox'#8'grpAbout'#4'Left'#2#8#6
+  +'Height'#2'N'#3'Top'#2#10#5'Width'#3#12#1#7'Caption'#6#10'Informacje'#12'Cli'
+  +'entHeight'#2'<'#11'ClientWidth'#3#8#1#8'TabOrder'#2#0#0#6'TLabel'#14'lblApp'
+  +'lication'#4'Left'#2'2'#6'Height'#2#26#3'Top'#2#14#5'Width'#3#182#0#7'Captio'
+  +'n'#6#18'Test Software v1.0'#10'Font.Color'#4#0'@'#128#0#11'Font.Height'#2#25
+  +#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#0#7'TB'
+  +'utton'#8'btnClose'#4'Left'#2'h'#6'Height'#2#25#3'Top'#3#232#0#5'Width'#2'P'
+  +#7'Caption'#6#2'OK'#7'OnClick'#7#13'btnCloseClick'#8'TabOrder'#2#1#0#0#9'TGr'
+  +'oupBox'#15'grpRegisteredTo'#4'Left'#2#8#6'Height'#2'8'#3'Top'#2'`'#5'Width'
+  +#3#12#1#7'Caption'#6#27'Aplikacja zarejestrowana na'#12'ClientHeight'#2'&'#11
+  +'ClientWidth'#3#8#1#8'TabOrder'#2#2#0#6'TLabel'#17'lblRegisteredName'#4'Left'
+  +#2#14#6'Height'#2#14#3'Top'#2#8#5'Width'#2'X'#7'Caption'#6#17'Niezarejestrow'
+  +'ana'#11'ParentColor'#8#0#0#0#9'TGroupBox'#13'grpHardwareId'#4'Left'#2#8#6'H'
+  +'eight'#2'8'#3'Top'#3#160#0#5'Width'#3#12#1#7'Caption'#6#24'Identyfikator sp'
+  +'rz'#196#153'towy'#12'ClientHeight'#2'&'#11'ClientWidth'#3#8#1#8'TabOrder'#2
+  +#3#0#5'TEdit'#13'edtHardwareId'#4'Left'#2#8#6'Height'#2#21#3'Top'#2#7#5'Widt'
+  +'h'#3#244#0#8'ReadOnly'#9#8'TabOrder'#2#0#0#0#0#6'TTimer'#16'tmrSpecialEffec'
+  +'t'#8'Interval'#3#200#0#7'OnTimer'#7#21'tmrSpecialEffectTimer'#4'left'#3#248
+  +#0#3'top'#3#232#0#0#0#0
+]);

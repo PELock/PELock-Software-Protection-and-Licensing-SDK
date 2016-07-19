@@ -1,0 +1,17 @@
+Test plugin v1.0
+================
+
+This is a description file, PELock will use it to display information
+about this plugin (you need to include [info] section).
+
+
+[info]
+name=Test plugin
+version=v1.0
+date=01.01.2016
+
+author=Bartosz Wójcik
+email=support@pelock.com
+url=https://www.pelock.com
+
+description=Sample description.{}{}End.

@@ -1,0 +1,1 @@
+You need to protect this application with "Trial period" option enabled.

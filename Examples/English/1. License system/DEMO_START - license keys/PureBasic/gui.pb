@@ -1,0 +1,21 @@
+;///////////////////////////////////////////////////////////////////////////////
+;//
+;// Example of how to use DEMO_START and DEMO_END macros
+;//
+;// Version        : PELock v2.0
+;// Language       : PureBasic
+;// Author         : Bartosz Wójcik (support@pelock.com)
+;// Web page       : https://www.pelock.com
+;//
+;///////////////////////////////////////////////////////////////////////////////
+
+IncludePath "..\..\..\..\..\SDK\English\PureBasic\"
+XIncludeFile "pelock.pb"
+
+    ; code between DEMO_START and DEMO_END will be encrypted
+    ; in protected file and will not be available without license key
+    DEMO_START
+
+    MessageRequester("PELock", "Hello world from the full version of my software!")
+
+    DEMO_END

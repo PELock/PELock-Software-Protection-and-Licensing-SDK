@@ -1,0 +1,87 @@
+object frmMain: TfrmMain
+  Left = 263
+  Height = 266
+  Top = 186
+  Width = 292
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'PELock Przykład'
+  ClientHeight = 266
+  ClientWidth = 292
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '0.9.30'
+  object grpAbout: TGroupBox
+    Left = 8
+    Height = 78
+    Top = 10
+    Width = 268
+    Caption = 'Informacje'
+    ClientHeight = 60
+    ClientWidth = 264
+    TabOrder = 0
+    object lblApplication: TLabel
+      Left = 50
+      Height = 26
+      Top = 14
+      Width = 182
+      Caption = 'Test Software v1.0'
+      Font.Color = 8404992
+      Font.Height = 25
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object btnClose: TButton
+    Left = 104
+    Height = 25
+    Top = 232
+    Width = 80
+    Caption = 'OK'
+    OnClick = btnCloseClick
+    TabOrder = 1
+  end
+  object grpRegisteredTo: TGroupBox
+    Left = 8
+    Height = 56
+    Top = 96
+    Width = 268
+    Caption = 'Aplikacja zarejestrowana na'
+    ClientHeight = 38
+    ClientWidth = 264
+    TabOrder = 2
+    object lblRegisteredName: TLabel
+      Left = 14
+      Height = 14
+      Top = 8
+      Width = 88
+      Caption = 'Niezarejestrowana'
+      ParentColor = False
+    end
+  end
+  object grpHardwareId: TGroupBox
+    Left = 8
+    Height = 56
+    Top = 160
+    Width = 268
+    Caption = 'Identyfikator sprzętowy'
+    ClientHeight = 38
+    ClientWidth = 264
+    TabOrder = 3
+    object edtHardwareId: TEdit
+      Left = 8
+      Height = 21
+      Top = 7
+      Width = 244
+      ReadOnly = True
+      TabOrder = 0
+    end
+  end
+  object tmrSpecialEffect: TTimer
+    Interval = 200
+    OnTimer = tmrSpecialEffectTimer
+    left = 248
+    top = 232
+  end
+end

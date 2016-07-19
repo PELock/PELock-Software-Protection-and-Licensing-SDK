@@ -1,0 +1,1 @@
+Skopiuj keygen.h oraz \lib\ms32\keygen.lib do biezacego katalogu.

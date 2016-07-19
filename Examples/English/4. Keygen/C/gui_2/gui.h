@@ -1,0 +1,14 @@
+
+#define	IDI_MAIN		999
+#define	DLG_MAIN		111
+#define	IDC_REG			120
+
+#define	IDB_GEN			110
+#define IDB_UPDATE_PROJECT	120
+#define	IDC_USER_NAME		101
+#define	IDC_HARDWARE_ID		102
+#define IDC_ADDITIONAL_1	103
+#define IDC_ADDITIONAL_2	104
+#define IDC_ADDITIONAL_3	105
+#define IDC_ADDITIONAL_4	106
+
