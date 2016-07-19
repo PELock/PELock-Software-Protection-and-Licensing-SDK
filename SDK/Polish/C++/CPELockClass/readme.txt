@@ -1,0 +1,1 @@
+Visual C++ examples needs this files to compile!
