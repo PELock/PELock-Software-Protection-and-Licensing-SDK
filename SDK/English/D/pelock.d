@@ -36,6 +36,11 @@ class PELock
 	const int PELOCK_MAX_USERNAME = 8193;
 
 	//
+	// max. number of hardware id characters, including terminating null at the end
+	//
+	const int PELOCK_MAX_HARDWARE_ID = 17;
+
+	//
 	// return codes for time trial procedures
 	//
 	enum TrialCodes

@@ -15,7 +15,8 @@ import core.stdc.stdio;
 import core.sys.windows.windows;
 import PELock;
 
-TCHAR[64] hardware_id = 0, name = 0;
+TCHAR[PELOCK_MAX_USERNAME] name = 0;
+TCHAR[PELOCK_MAX_HARDWARE_ID] hardware_id = 0;
 
 int main(string args[])
 {
@@ -26,7 +27,7 @@ int main(string args[])
 	int name_len = 0;
 
 	// odczytaj identyfikator sprzetowy do bufora hardware_id
-	myPELock.GetHardwareId(hardware_id.ptr, 64);
+	myPELock.GetHardwareId(hardware_id.ptr, hardware_id.length);
 
 	// aby w ogole mozna bylo skorzystac z funkcji GetHardwareId()
 	// wymagane jest, zeby program zawieral chociaz jedno makro DEMO_START
@@ -34,7 +35,7 @@ int main(string args[])
 	mixin(DEMO_START);
 
 	// odczytaj dane zarejestrowanego uzytkownika
-	name_len = myPELock.GetRegistrationName(name.ptr, 64);
+	name_len = myPELock.GetRegistrationName(name.ptr, name.length);
 
 	// wyswietl dane zarejestrowanego uzytkownika
 	writef("Program zarejestrowany dla %s", name);

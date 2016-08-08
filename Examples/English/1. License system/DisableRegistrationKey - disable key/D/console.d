@@ -15,7 +15,7 @@ import core.stdc.stdio;
 import core.sys.windows.windows;
 import PELock;
 
-TCHAR[64] name = 0;
+TCHAR[PELOCK_MAX_USERNAME] name = 0;
 
 int main(string args[])
 {
@@ -25,7 +25,7 @@ int main(string args[])
 	mixin(DEMO_START);
 
 	// read registered user name
-	myPELock.GetRegistrationName(name.ptr, 64);
+	myPELock.GetRegistrationName(name.ptr, name.length);
 
 	writef("Program registered to %s\n", name);
 
@@ -42,7 +42,7 @@ int main(string args[])
 	mixin(DEMO_START);
 
 	// read registered user name
-	myPELock.GetRegistrationName(name.ptr, 64);
+	myPELock.GetRegistrationName(name.ptr, name.length);
 
 	writef("Program registered to %s\n", name);
 

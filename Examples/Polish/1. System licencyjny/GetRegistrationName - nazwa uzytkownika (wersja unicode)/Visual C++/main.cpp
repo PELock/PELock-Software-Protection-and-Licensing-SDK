@@ -13,8 +13,8 @@
 
 #define _countof(array) (sizeof(array) / sizeof(array[0]))
 
-TCHAR name[64] = { 0 };
-TCHAR hardwareid[64] = { 0 };
+TCHAR name[PELOCK_MAX_USERNAME] = { 0 };
+TCHAR hardwareid[PELOCK_MAX_HARDWARE_ID] = { 0 };
 
 // deklaracja klasy CPELock
 CPELock myPELock;

@@ -14,6 +14,9 @@ const
 {$EXTERNALSYM PELOCK_MAX_USERNAME}
 PELOCK_MAX_USERNAME             = 8193;                 // max. rozmiar nazwy uzytkownika zapisanej w kluczu, wlaczajac konczace zero
 
+{$EXTERNALSYM PELOCK_MAX_HARDWARE_ID}
+PELOCK_MAX_HARDWARE_ID          = 17;                   // max. liczba znakow identyfikatora sprzetowego, wlaczajac konczace zero
+
 {$EXTERNALSYM PELOCK_SAFE_KEY_SIZE}
 PELOCK_SAFE_KEY_SIZE            = (40*1024);            // bezpieczny rozmiar bufora na dane wyjsciowe klucza
 

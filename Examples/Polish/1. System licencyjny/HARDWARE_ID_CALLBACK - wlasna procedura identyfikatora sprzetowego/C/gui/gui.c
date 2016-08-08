@@ -18,7 +18,7 @@
 #include "pelock.h"
 
 // bufor, gdzie zostanie odczytana nazwa zarejestrowanego uzytkownika
-unsigned char szUser[256] = { 0 };
+unsigned char szUser[PELOCK_MAX_USERNAME] = { 0 };
 
 //
 // wlasna procedura callback identyfikatora sprzetowego

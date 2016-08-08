@@ -15,7 +15,7 @@ XIncludeFile "pelock.pb"
 
 ; start
 
-    regname.s{64}
+    regname.s{#PELOCK_MAX_USERNAME}
     keysize.l
     dwStatus.l
 
@@ -62,7 +62,7 @@ XIncludeFile "pelock.pb"
         DEMO_START
 
         ; get registered user name
-        GetRegistrationName(regname, 64)
+        GetRegistrationName(regname, SizeOf(regname))
 
         DEMO_END
 

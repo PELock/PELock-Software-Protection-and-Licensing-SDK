@@ -14,7 +14,7 @@ IncludePath "..\..\..\..\..\SDK\Polish\PureBasic\"
 XIncludeFile "pelock.pb"
 
 Global hardware_id.s{64}
-Global regname.s{64}
+Global regname.s{#PELOCK_MAX_USERNAME}
 
 ;
 ; wlasna procedura callback identyfikatora sprzetowego
@@ -58,7 +58,7 @@ EndProcedure
 ; start
 
     ; odczytaj identyfikator sprzetowy do bufora hardware_id
-    GetHardwareId(hardware_id, 64)
+    GetHardwareId(hardware_id, SizeOf(hardware_id))
 
     ; aby w ogole mozna bylo skorzystac z funkcji GetHardwareId()
     ; wymagane jest, zeby program zawieral chociaz jedno makro DEMO_START
@@ -66,7 +66,7 @@ EndProcedure
     DEMO_START
 
     ; odczytaj dane zarejestrowanego uzytkownika
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SizeOf(regname))
 
     ; wyswietl dane zarejestrowanego uzytkownika
     MessageRequester("PELock", "Program zarejestrowany dla " + regname)

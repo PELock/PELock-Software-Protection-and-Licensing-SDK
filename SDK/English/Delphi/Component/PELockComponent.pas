@@ -39,6 +39,11 @@ const
 PELOCK_MAX_USERNAME = 8193;
 
 //
+// max. number of hardware id characters, including terminating null at the end
+//
+PELOCK_MAX_HARDWARE_ID = 17;
+
+//
 // TPELock class declaration
 //
 type

@@ -12,7 +12,10 @@
 const
 
 {$EXTERNALSYM PELOCK_MAX_USERNAME}
-PELOCK_MAX_USERNAME             = 8193;                 // max size of registered user name stored in the keyfile
+PELOCK_MAX_USERNAME             = 8193;                 // max size of registered user name stored in the keyfile, including terminating null at the end
+
+{$EXTERNALSYM PELOCK_MAX_HARDWARE_ID}
+PELOCK_MAX_HARDWARE_ID          = 17;                   // max. number of hardware id characters, including terminating null at the end
 
 {$EXTERNALSYM PELOCK_SAFE_KEY_SIZE}
 PELOCK_SAFE_KEY_SIZE            = (40*1024);            // safe buffer size for key data

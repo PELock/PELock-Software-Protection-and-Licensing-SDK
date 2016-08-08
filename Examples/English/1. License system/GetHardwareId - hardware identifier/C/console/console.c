@@ -14,19 +14,19 @@
 #include <conio.h>
 #include "pelock.h"
 
-unsigned char hardware_id[64] = { 0 }, name[64] = { 0 };
+unsigned char hardware_id[PELOCK_MAX_HARDWARE_ID] = { 0 }, name[PELOCK_MAX_USERNAME] = { 0 };
 
 int main(int argc, char *argv[])
 {
 	// read hardware id
-	GetHardwareId(hardware_id, 64);
+	GetHardwareId(hardware_id, sizeof(hardware_id));
 
 	// to be able to read hardware id, application should contain at least one
 	// DEMO_START or FEATURE_x_START marker
 	DEMO_START
 
 	// get name of registered user
-	GetRegistrationName(name, 64);
+	GetRegistrationName(name, sizeof(name));
 
 	// print registered user name
 	printf("Program registered to %s", name);

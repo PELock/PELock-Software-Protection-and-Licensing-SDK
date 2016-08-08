@@ -17,7 +17,7 @@
 #include "pelock.h"
 
 // registered user
-unsigned char szUser[256] = { 0 };
+unsigned char szUser[PELOCK_MAX_USERNAME] = { 0 };
 
 //
 // custom hardware id callback
@@ -103,6 +103,7 @@ BOOL CALLBACK DlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			return TRUE;
 
 		case WM_COMMAND:
+
 			switch (LOWORD (wParam))
 			{
 				case IDCANCEL:

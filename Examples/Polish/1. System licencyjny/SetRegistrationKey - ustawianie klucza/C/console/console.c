@@ -15,7 +15,7 @@
 #include <conio.h>
 #include "pelock.h"
 
-unsigned char name[64] = { 0 };
+unsigned char name[PELOCK_MAX_USERNAME] = { 0 };
 
 int main(int argc, char *argv[])
 {
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	DEMO_START
 
 	// odczytaj dane zarejestrowanego uzytkownika
-	GetRegistrationName(name, 64);
+	GetRegistrationName(name, sizeof(name));
 
 	printf("Program zarejestrowany dla %s", name);
 

@@ -14,14 +14,14 @@
 #include <conio.h>
 #include "pelock.h"
 
-unsigned char name[64] = { 0 };
+unsigned char name[PELOCK_MAX_USERNAME] = { 0 };
 
 int main(int argc, char *argv[])
 {
 	DEMO_START
 
 	// read registered user name
-	GetRegistrationName(name, 64);
+	GetRegistrationName(name, sizeof(name));
 
 	printf("Program registered to %s\n", name);
 
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	DEMO_START
 
 	// read registered user name
-	GetRegistrationName(name, 64);
+	GetRegistrationName(name, sizeof(name));
 
 	printf("Program registered to %s\n", name);
 

@@ -13,7 +13,7 @@
 IncludePath "..\..\..\..\..\SDK\English\PureBasic\"
 XIncludeFile "pelock.pb"
 
-Global regname.s{64}
+Global regname.s{#PELOCK_MAX_USERNAME}
 
 ; start
 
@@ -28,7 +28,7 @@ Global regname.s{64}
     DEMO_START
 
     ; get name of registered user
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SizeOf(regname))
 
     MessageRequester("PELock", "Program registered to " + regname)
 

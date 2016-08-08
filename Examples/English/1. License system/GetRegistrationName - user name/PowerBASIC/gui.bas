@@ -15,14 +15,14 @@
 #INCLUDE "win32api.inc"
 #INCLUDE "pelock.inc"
 
-GLOBAL regname AS ASCIIZ * 64
+GLOBAL regname AS ASCIIZ * %PELOCK_MAX_USERNAME
 
 FUNCTION PBMAIN () AS LONG
 
     DEMO_START
 
     ' read registered user name
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SIZEOF(regname))
 
     MSGBOX "Program registered to " & regname
 

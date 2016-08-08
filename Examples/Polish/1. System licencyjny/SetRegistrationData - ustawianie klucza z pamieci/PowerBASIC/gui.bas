@@ -17,7 +17,7 @@
 
 FUNCTION PBMAIN () AS LONG
 
-    DIM regname AS ASCIIZ * 64
+    DIM regname AS ASCIIZ * %PELOCK_MAX_USERNAME
     DIM keydata AS STRING
     DIM keysize AS LONG
     DIM keyfile AS LONG
@@ -58,7 +58,7 @@ FUNCTION PBMAIN () AS LONG
 
         ' jesli plik zawieral poprawne dane licencyjne, odczytaj
         ' dane zarejestrowanego uzytkownika
-        GetRegistrationName(regname, 64)
+        GetRegistrationName(regname, SIZEOF(regname))
 
         DEMO_END
 

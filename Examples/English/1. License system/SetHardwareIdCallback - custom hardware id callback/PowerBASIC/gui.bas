@@ -15,8 +15,8 @@
 #INCLUDE "win32api.inc"
 #INCLUDE "pelock.inc"
 
-GLOBAL hardware_id AS ASCIIZ * 64
-GLOBAL regname AS ASCIIZ * 64
+GLOBAL regname AS ASCIIZ * %PELOCK_MAX_HARDWARE_ID
+GLOBAL regname AS ASCIIZ * %PELOCK_MAX_USERNAME
 
 '
 ' custom hardware id callback
@@ -62,14 +62,14 @@ FUNCTION PBMAIN () AS LONG
     ReloadRegistrationKey
 
     ' read hardware id
-    GetHardwareId(hardware_id, 64)
+    GetHardwareId(hardware_id, SIZEOF(hardware_id))
 
     ' to be able to read hardware id, application should contain at least one
     ' DEMO_START or FEATURE_x_START marker
     DEMO_START
 
     ' get name of registered user
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SIZEOF(regname))
 
     ' print registered user name
     MSGBOX "Program registered to " & regname

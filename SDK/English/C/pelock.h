@@ -25,6 +25,9 @@ typedef int BOOL;
 /* max. size of registered user name stored in the keyfile, including terminating null at the end */
 #define PELOCK_MAX_USERNAME 8193
 
+/* max. number of hardware id characters, including terminating null at the end */
+#define PELOCK_MAX_HARDWARE_ID 17
+
 /* license key system API */
 
 /* get registration key status information */

@@ -17,7 +17,7 @@
 #include "pelock.h"
 
 // registered user name buffer
-unsigned char szUser[256] = { 0 };
+unsigned char szUser[PELOCK_MAX_USERNAME] = { 0 };
 
 BOOL CALLBACK DlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {

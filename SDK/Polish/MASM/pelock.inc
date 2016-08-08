@@ -39,6 +39,9 @@ ifdef PELOCK_LICENSE_APIS
 ;max. rozmiar nazwy uzytkownika zapisanej w kluczu, wlaczajac konczace zero
 PELOCK_MAX_USERNAME		equ 8193
 
+; max. liczba znakow identyfikatora sprzetowego, wlaczajac konczace zero */
+PELOCK_MAX_HARDWARE_ID		equ 17
+
 ;北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北
 ;
 ; zwraca informacje o statusie biezacego klucza licencyjnego

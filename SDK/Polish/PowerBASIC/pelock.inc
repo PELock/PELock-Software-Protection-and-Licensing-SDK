@@ -23,6 +23,9 @@ MACRO PELOCK_SIZEOF(x) = PELOCK_DWORD(SIZEOF(x))
 ' max. rozmiar nazwy uzytkownika zapisanej w kluczu, wlaczajac konczace zero
 %PELOCK_MAX_USERNAME = 8193
 
+' max. liczba znakow identyfikatora sprzetowego, wlaczajac konczace zero */
+%PELOCK_MAX_HARDWARE_ID = 17
+
 ' funkcje API systemu licencyjnego
 
 ' odczytaj informacje o statusie klucza licencyjnego

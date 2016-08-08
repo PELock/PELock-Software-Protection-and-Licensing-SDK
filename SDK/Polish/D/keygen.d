@@ -20,6 +20,7 @@ import core.sys.windows.windows;
 import std.bitmanip;
 
 const int PELOCK_MAX_USERNAME			= 8193;		// max. rozmiar nazwy uzytkownika zapisanej w kluczu, wlaczajac konczace zero
+const int PELOCK_MAX_HARDWARE_ID		= 17;		// max. liczba znakow identyfikatora sprzetowego, wlaczajac konczace zero
 const int PELOCK_SAFE_KEY_SIZE			= 40*1024;	// bezpieczny rozmiar bufora na dane wyjsciowe klucza
 
 // formaty wyjsciowe kluczy

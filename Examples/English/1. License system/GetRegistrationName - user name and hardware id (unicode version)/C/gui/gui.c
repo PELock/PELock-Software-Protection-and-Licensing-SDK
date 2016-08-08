@@ -23,7 +23,7 @@
 #define _countof(array) (sizeof(array) / sizeof(array[0]))
 
 // registered user name buffer
-TCHAR szUser[256] = { 0 };
+TCHAR szUser[PELOCK_MAX_USERNAME] = { 0 };
 
 BOOL CALLBACK DlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {

@@ -39,6 +39,9 @@ ifdef PELOCK_LICENSE_APIS
 ; max. size of registered user name stored in the keyfile, including terminating null at the end
 PELOCK_MAX_USERNAME		equ 8193
 
+; max. number of hardware id characters, including terminating null at the end
+PELOCK_MAX_HARDWARE_ID		equ 17
+
 ;北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北北
 ;
 ; get registration key status information

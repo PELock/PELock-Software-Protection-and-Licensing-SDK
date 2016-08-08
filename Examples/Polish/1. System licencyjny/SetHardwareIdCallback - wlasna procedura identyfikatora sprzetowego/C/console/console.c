@@ -14,7 +14,7 @@
 #include <conio.h>
 #include "pelock.h"
 
-unsigned char hardware_id[64] = { 0 }, name[64] = { 0 };
+unsigned char hardware_id[PELOCK_MAX_HARDWARE_ID] = { 0 }, name[PELOCK_MAX_USERNAME] = { 0 };
 
 //
 // wlasna procedura callback identyfikatora sprzetowego
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	ReloadRegistrationKey();
 
 	// odczytaj identyfikator sprzetowy do bufora hardware_id
-	GetHardwareId(hardware_id, 64);
+	GetHardwareId(hardware_id, sizeof(hardware_id));
 
 	// aby w ogole mozna bylo skorzystac z funkcji GetHardwareId()
 	// wymagane jest, zeby program zawieral chociaz jedno makro DEMO_START
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 	DEMO_START
 
 	// odczytaj dane zarejestrowanego uzytkownika
-	GetRegistrationName(name, 64);
+	GetRegistrationName(name, sizeof(name));
 
 	// wyswietl dane zarejestrowanego uzytkownika
 	printf("Program zarejestrowany dla %s", name);

@@ -36,6 +36,11 @@ class PELock
 	const int PELOCK_MAX_USERNAME = 8193;
 
 	//
+	// max. liczba znakow identyfikatora sprzetowego, wlaczajac konczace zero */
+	//
+	const int PELOCK_MAX_HARDWARE_ID = 17;
+
+	//
 	// kody bledow z procedur systemu ograniczenia czasowego
 	//
 	enum TrialCodes

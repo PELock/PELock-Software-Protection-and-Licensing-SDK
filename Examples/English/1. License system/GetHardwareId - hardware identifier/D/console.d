@@ -15,7 +15,8 @@ import core.stdc.stdio;
 import core.sys.windows.windows;
 import PELock;
 
-TCHAR[64] hardware_id = 0, name = 0;
+TCHAR[PELOCK_MAX_USERNAME] name = 0;
+TCHAR[PELOCK_MAX_HARDWARE_ID] hardware_id = 0;
 
 int main(string args[])
 {
@@ -26,14 +27,14 @@ int main(string args[])
 	int name_len = 0;
 
 	// read hardware id
-	myPELock.GetHardwareId(hardware_id.ptr, 64);
+	myPELock.GetHardwareId(hardware_id.ptr, hardware_id.length);
 
 	// to be able to read hardware id, application should contain at least one
 	// DEMO_START or FEATURE_x_START marker
 	mixin(DEMO_START);
 
 	// get name of registered user
-	name_len = myPELock.GetRegistrationName(name.ptr, 64);
+	name_len = myPELock.GetRegistrationName(name.ptr, name.length);
 
 	// print registered user name
 	writef("Program registered to %s", name);

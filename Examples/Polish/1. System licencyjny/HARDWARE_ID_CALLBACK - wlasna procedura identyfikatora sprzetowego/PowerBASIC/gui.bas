@@ -16,8 +16,8 @@
 #INCLUDE "win32api.inc"
 #INCLUDE "pelock.inc"
 
-GLOBAL hardware_id AS ASCIIZ * 64
-GLOBAL regname AS ASCIIZ * 64
+GLOBAL regname AS ASCIIZ * %PELOCK_MAX_HARDWARE_ID
+GLOBAL regname AS ASCIIZ * %PELOCK_MAX_USERNAME
 
 '
 ' wlasna procedura callback identyfikatora sprzetowego
@@ -61,7 +61,7 @@ END FUNCTION
 FUNCTION PBMAIN () AS LONG
 
     ' odczytaj identyfikator sprzetowy do bufora hardware_id
-    GetHardwareId(hardware_id, 64)
+    GetHardwareId(hardware_id, SIZEOF(hardware_id))
 
     ' aby w ogole mozna bylo skorzystac z funkcji GetHardwareId()
     ' wymagane jest, zeby program zawieral chociaz jedno makro DEMO_START
@@ -69,7 +69,7 @@ FUNCTION PBMAIN () AS LONG
     DEMO_START
 
     ' odczytaj dane zarejestrowanego uzytkownika
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SIZEOF(regname))
 
     ' wyswietl dane zarejestrowanego uzytkownika
     MSGBOX "Program zarejestrowany dla " & regname

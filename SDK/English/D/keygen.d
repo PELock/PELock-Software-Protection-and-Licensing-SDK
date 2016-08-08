@@ -19,7 +19,8 @@ import core.memory;
 import core.sys.windows.windows;
 import std.bitmanip;
 
-const int PELOCK_MAX_USERNAME			= 8193;		// max size of registered user name stored in the keyfile
+const int PELOCK_MAX_USERNAME			= 8193;		// max size of registered user name stored in the keyfile, including terminating null at the end
+const int PELOCK_MAX_HARDWARE_ID		= 17;		// max. number of hardware id characters, including terminating null at the end
 const int PELOCK_SAFE_KEY_SIZE			= 40*1024;	// safe buffer size for key data
 
 // formaty wyjsciowe kluczy

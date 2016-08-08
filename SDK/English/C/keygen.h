@@ -12,7 +12,8 @@
 #ifndef __PELOCK_KEYGEN__
 #define __PELOCK_KEYGEN__
 
-#define PELOCK_MAX_USERNAME		8193		// max size of registered user name stored in the keyfile
+#define PELOCK_MAX_USERNAME		8193		// max size of registered user name stored in the keyfile, including terminating null at the end
+#define PELOCK_MAX_HARDWARE_ID		17		// max. number of hardware id characters, including terminating null at the end
 #define PELOCK_SAFE_KEY_SIZE		(40*1024)	// safe buffer size for key data
 
 // output key formats

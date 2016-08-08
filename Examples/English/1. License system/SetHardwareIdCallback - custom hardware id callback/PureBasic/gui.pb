@@ -13,7 +13,7 @@ IncludePath "..\..\..\..\..\SDK\English\PureBasic\"
 XIncludeFile "pelock.pb"
 
 Global hardware_id.s{64}
-Global regname.s{64}
+Global regname.s{#PELOCK_MAX_USERNAME}
 
 ;
 ; custom hardware id callback
@@ -59,14 +59,14 @@ EndProcedure
     ReloadRegistrationKey()
 
     ; read hardware id
-    GetHardwareId(hardware_id, 64)
+    GetHardwareId(hardware_id, SizeOf(hardware_id))
 
     ; to be able to read hardware id, application should contain at least one
     ; DEMO_START or FEATURE_x_START marker
     DEMO_START
 
     ; get name of registered user
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SizeOf(regname))
 
     ; print registered user name
     MessageRequester("PELock", "Program registered to " + regname)

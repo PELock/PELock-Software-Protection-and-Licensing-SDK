@@ -12,14 +12,16 @@
 IncludePath "..\..\..\..\..\SDK\English\PureBasic\"
 XIncludeFile "pelock.pb"
 
-Global regname.s{64}
+Global regname.s{#PELOCK_MAX_USERNAME}
 
 ; start
+
+MessageRequester("PELock", "Program registered to " + Str(SizeOf(regname)))
 
     DEMO_START
 
     ; read registered user name
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SizeOf(regname))
 
     MessageRequester("PELock", "Program registered to " + regname)
 
@@ -29,14 +31,14 @@ Global regname.s{64}
     DisableRegistrationKey(#False)
 
     ; reset name
-    regname = "")
+    regname = ""
 
     ; following code won't be executed after disabling
     ; license key!
     DEMO_START
 
     ; read registered user name
-    GetRegistrationName(regname, 64)
+    GetRegistrationName(regname, SizeOf(regname))
 
     MessageRequester("PELock", "Program registered to " + regname)
 

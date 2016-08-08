@@ -15,7 +15,7 @@
 #include "pelock.h"
 
 // domyslna wartosc
-unsigned char name[64] = "Wersja niezarejestrowana";
+unsigned char name[PELOCK_MAX_USERNAME] = "Wersja niezarejestrowana";
 void *keydata = NULL;
 int keysize = 0;
 FILE *keyfile = NULL;
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 		// dane zarejestrowanego uzytkownika
 		DEMO_START
 
-		GetRegistrationName(name, 64);
+		GetRegistrationName(name, sizeof(name));
 
 		DEMO_END
 	}

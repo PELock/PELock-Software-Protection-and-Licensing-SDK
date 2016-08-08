@@ -15,7 +15,7 @@
 #include "pelock.h"
 
 // default value
-unsigned char name[64] = "Evaluation version";
+unsigned char name[PELOCK_MAX_USERNAME] = "Evaluation version";
 void *keydata = NULL;
 int keysize = 0;
 FILE *keyfile = NULL;
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 		DEMO_START
 
 		// get registered user name
-		GetRegistrationName(name, 64);
+		GetRegistrationName(name, sizeof(name));
 
 		DEMO_END
 	}

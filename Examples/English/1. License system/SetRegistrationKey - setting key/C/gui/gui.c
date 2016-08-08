@@ -18,7 +18,7 @@
 #include "pelock.h"
 
 // registered user buffer
-unsigned char szUser[256] = { 0 };
+unsigned char szUser[PELOCK_MAX_USERNAME] = { 0 };
 
 // license key path buffer
 unsigned char szWindowsPath[512] = { 0 };

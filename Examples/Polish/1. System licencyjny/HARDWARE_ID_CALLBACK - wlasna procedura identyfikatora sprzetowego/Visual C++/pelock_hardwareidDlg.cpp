@@ -38,7 +38,7 @@ void CPelock_hardwareidDlg::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CPelock_hardwareidDlg)
 	DDX_Text(pDX, IDC_HARDWAREID, m_HardwareId);
-	DDV_MaxChars(pDX, m_HardwareId, 128);
+	DDV_MaxChars(pDX, m_HardwareId, PELOCK_MAX_HARDWARE_ID);
 	//}}AFX_DATA_MAP
 }
 
@@ -56,7 +56,7 @@ END_MESSAGE_MAP()
 BOOL CPelock_hardwareidDlg::OnInitDialog()
 {
 	CPELock myPELock;
-	char szHardwareId[128];
+	char szHardwareId[PELOCK_MAX_HARDWARE_ID];
 
 	CDialog::OnInitDialog();
 
