@@ -1,4 +1,4 @@
-#PELock Software Protection & Software License Key System
+# PELock Software Protection & Software License Key System
 
 PELock is a software security solution designed for protection
 of any 32 bit Windows applications against cracking, tampering
@@ -15,16 +15,16 @@ was used to create it.
 
 ![Advanced software protection settings](https://www.pelock.com/img/en/products/pelock/options/protection/pelock-options-protection-advanced-protection-settings.png)
 
-##SDK
+## SDK
 
 You can closely integrate the protection and licensing features
 using dedicated SDK with hundreds of examples for C/C++, Delphi,
-Lazarus, Freepascal, PureBasic, PowerBASIC, D, Assembler with
-full source codes
+Lazarus, Free Pascal, PureBasic, PowerBASIC, D, Assembler with
+full source codes.
 
 ![Protection and Licensing SDK settings](https://www.pelock.com/img/en/products/pelock/options/protection/pelock-options-protection-sdk-system.png)
 
-##Software Licensing
+## Software Licensing
 
 PELock comes with a built-in licensing system, you can use it
 to easily add license key system for your application.
@@ -33,14 +33,14 @@ to easily add license key system for your application.
 
 ![Adding new license](https://www.pelock.com/img/en/products/pelock/project/pelock-project-add-new-user.png)
 
-##Time trial settings
+## Time trial settings
 
 You can also set various time-trial limitations for the
 protected application, e.g. 30 days trial.
 
 ![Time trial settings](https://www.pelock.com/img/en/products/pelock/options/project/pelock-options-project-settings-time-trial-settings.png)
 
-##Virtual DLL binder
+## Virtual DLL binder
 
 PELock has a built-in binder for additional application DLL libraries, it's possible to merge your main application EXE file with any number of extra DLL libraries into single output EXE file.
 
