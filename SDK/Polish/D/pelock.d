@@ -2,7 +2,7 @@
 //
 // Klasa PELock
 //
-// Wersja         : PELock v2.0
+// Wersja         : PELock v2.09
 // Jezyk          : D
 // Autor          : Bartosz Wójcik (support@pelock.com)
 // Strona domowa  : https://www.pelock.com
@@ -67,6 +67,12 @@ class PELock
 	int GetKeyStatus()
 	{
 		return (GetWindowText(cast(HWND)-17, null, 256));
+	}
+
+	// czy klucz jest zablokowany na sprzetowy identyfikator
+	BOOL CPELock::IsKeyHardwareIdLocked()
+	{
+		return (GetWindowText((HWND)-24, NULL, 128));
 	}
 
 	// odczytaj nazwe zarejestrowanego uzytkownika z klucza licencyjnego

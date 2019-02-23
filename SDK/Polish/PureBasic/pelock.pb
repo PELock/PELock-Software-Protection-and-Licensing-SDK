@@ -2,7 +2,7 @@
 ;//
 ;// PELock plik naglowkowy
 ;//
-;// Wersja         : PELock v2.0
+;// Wersja         : PELock v2.09
 ;// Jezyk          : PureBasic
 ;// Autor          : Bartosz Wójcik (support@pelock.com)
 ;// Strona domowa  : https://www.pelock.com
@@ -39,6 +39,11 @@ EndMacro
 #PELOCK_KEY_STOLEN     = 3 ; klucz jest kradziony
 #PELOCK_KEY_WRONG_HWID = 4 ; sprzetowy identyfikator nie pasuje
 #PELOCK_KEY_EXPIRED    = 5 ; klucz jest wygasniety
+
+; czy klucz jest zablokowany na sprzetowy identyfikator
+Macro IsKeyHardwareIdLocked()
+  GetWindowText_(-24, #Null, 128)
+EndMacro
 
 ; odczytaj nazwe zarejestrowanego uzytkownika z klucza licencyjnego
 Macro GetRegistrationName(szRegistrationName, nMaxCount)

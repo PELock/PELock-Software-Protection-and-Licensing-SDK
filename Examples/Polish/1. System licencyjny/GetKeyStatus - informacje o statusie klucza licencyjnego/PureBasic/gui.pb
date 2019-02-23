@@ -30,7 +30,7 @@ XIncludeFile "pelock.pb"
 
         MessageRequester("PELock", "Klucz licencyjny jest poprawny.")
 
-        DEMO_START
+        DEMO_END
 
     ;
     ; niepoprawny format klucza licencyjnego (uszkodzony)

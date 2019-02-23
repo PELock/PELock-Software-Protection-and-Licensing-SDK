@@ -2,7 +2,7 @@
 ;//
 ;// PELock header file
 ;//
-;// Version        : PELock v2.0
+;// Version        : PELock v2.09
 ;// Language       : PureBasic
 ;// Author         : Bartosz Wójcik (support@pelock.com)
 ;// Web page       : https://www.pelock.com
@@ -39,6 +39,11 @@ EndMacro
 #PELOCK_KEY_STOLEN     = 3 ; key is stolen
 #PELOCK_KEY_WRONG_HWID = 4 ; hardware id doesn't match
 #PELOCK_KEY_EXPIRED    = 5 ; key is expired
+
+; is the key locked to the hardware identifier
+Macro IsKeyHardwareIdLocked()
+  GetWindowText_(-24, #Null, 128)
+EndMacro
 
 ; retrieve registration name from license key file
 Macro GetRegistrationName(szRegistrationName, nMaxCount)

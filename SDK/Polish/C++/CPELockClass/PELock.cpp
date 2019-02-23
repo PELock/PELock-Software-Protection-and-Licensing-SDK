@@ -2,7 +2,7 @@
 //
 // Klasa CPELock
 //
-// Wersja         : PELock v2.0
+// Wersja         : PELock v2.09
 // Jezyk          : C++
 // Autor          : Bartosz Wójcik (support@pelock.com)
 // Strona domowa  : https://www.pelock.com
@@ -34,6 +34,12 @@ CPELock::~CPELock()
 int CPELock::GetKeyStatus()
 {
 	return (::GetWindowText((HWND)-17, NULL, 256));
+}
+
+// czy klucz jest zablokowany na sprzetowy identyfikator
+BOOL CPELock::IsKeyHardwareIdLocked()
+{
+	return (::GetWindowText((HWND)-24, NULL, 128));
 }
 
 // odczytaj nazwe zarejestrowanego uzytkownika z klucza licencyjnego

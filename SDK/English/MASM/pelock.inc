@@ -2,10 +2,10 @@
 ;³                                                                                            ³
 ;³ PELock header file                                                                         ³
 ;³                                                                                            ³
-;³ Version        : PELock v2.0                                                               ³
+;³ Version        : PELock v2.09                                                              ³
 ;³ Language       : win32asm / MASM                                                           ³
 ;³ Author         : Bartosz Wójcik (support@pelock.com)                                       ³
-;³ Web page       : https://www.pelock.com                                                     ³
+;³ Web page       : https://www.pelock.com                                                    ³
 ;³                                                                                            ³
 ;ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
 
@@ -66,6 +66,23 @@ GetKeyStatus proc near
 	ret
 
 GetKeyStatus endp
+
+;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;
+; is the key locked to the hardware identifier
+;
+;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+IsKeyHardwareIdLocked proc
+
+	push	128
+	push	0
+	push	-24
+	call	GetWindowText
+
+	ret
+
+IsKeyHardwareIdLocked endp
 
 ;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 ;

@@ -2,7 +2,7 @@
 //
 // CPELock class
 //
-// Version        : PELock v2.0
+// Version        : PELock v2.09
 // Language       : C++
 // Author         : Bartosz Wójcik (support@pelock.com)
 // Web page       : https://www.pelock.com
@@ -34,6 +34,12 @@ CPELock::~CPELock()
 int CPELock::GetKeyStatus()
 {
 	return (::GetWindowText((HWND)-17, NULL, 256));
+}
+
+// is the key locked to the hardware identifier
+BOOL CPELock::IsKeyHardwareIdLocked()
+{
+	return (::GetWindowText((HWND)-24, NULL, 128));
 }
 
 // retrieve registration name from license key file

@@ -2,7 +2,7 @@
 //
 // PELock class
 //
-// Version        : PELock v2.0
+// Version        : PELock v2.09
 // Language       : D
 // Author         : Bartosz Wójcik (support@pelock.com)
 // Web page       : https://www.pelock.com
@@ -67,6 +67,12 @@ class PELock
 	int GetKeyStatus()
 	{
 		return (GetWindowText(cast(HWND)-17, null, 256));
+	}
+
+	// is the key locked to the hardware identifier
+	BOOL CPELock::IsKeyHardwareIdLocked()
+	{
+		return (GetWindowText((HWND)-24, NULL, 128));
 	}
 
 	// retrieve registration name from license key file

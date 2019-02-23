@@ -2,7 +2,7 @@
 '//
 '// PELock header file
 '//
-'// Version        : PELock v2.0
+'// Version        : PELock v2.09
 '// Language       : PowerBASIC
 '// Author         : Bartosz Wójcik (support@pelock.com)
 '// Web page       : https://www.pelock.com
@@ -38,6 +38,9 @@ MACRO GetKeyStatus() = GetWindowText( CDWD(-17), BYVAL %NULL, 256)
 %PELOCK_KEY_STOLEN     = 3 ' key is stolen
 %PELOCK_KEY_WRONG_HWID = 4 ' hardware id doesn't match
 %PELOCK_KEY_EXPIRED    = 5 ' key is expired
+
+' is the key locked to the hardware identifier
+MACRO IsKeyHardwareIdLocked = GetWindowText( CDWD(-24), BYVAL %NULL, 128)
 
 ' retrieve registration name from license key file
 MACRO GetRegistrationName(szRegistrationName, nMaxCount) = GetWindowText( CDWD(-1), szRegistrationName, nMaxCount)

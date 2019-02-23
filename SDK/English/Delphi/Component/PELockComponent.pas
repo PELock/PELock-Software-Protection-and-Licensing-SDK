@@ -2,7 +2,7 @@
 //
 // PELock Unit (component)
 //
-// Version        : PELock v2.0
+// Version        : PELock v2.09
 // Language       : Delphi/Pascal
 // Author         : Bartosz Wójcik (support@pelock.com)
 // Web page       : https://www.pelock.com
@@ -67,6 +67,7 @@ type
     //
     {$IFDEF PELOCK_LICENSE_APIS}
     function GetKeyStatus: TPELockKeyStatusError;
+    function IsKeyHardwareIdLocked: Boolean;
     function GetRegistrationName: string;
     function GetRawRegistrationName(lpRegistrationRawName: PByteArray; nMaxCount: integer): integer;
     function SetRegistrationKey(szRegistrationKeyPath: string): Boolean;
@@ -172,6 +173,26 @@ end;
 function TPELock.GetKeyStatus: TPELockKeyStatusError;
 begin
   Result := TPELockKeyStatusError( GetWindowText( HWND(-17), nil, 256 ) );
+end;
+
+//
+// function IsKeyHardwareIdLocked: Boolean;
+//
+// is the key locked to the hardware identifier
+//
+// [in]
+// no params
+//
+// [out]
+// True  - hardware id is set for the current key
+// False - hardware id is not set for the current key
+//
+function IsKeyHardwareIdLocked: Boolean;
+begin
+  if GetWindowText( HWND(-24), nil, 128) = 0 then
+    Result := False
+  else
+    Result := True;
 end;
 
 //

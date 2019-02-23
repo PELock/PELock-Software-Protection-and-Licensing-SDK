@@ -30,7 +30,7 @@ XIncludeFile "pelock.pb"
 
         MessageRequester("PELock", "License key is valid.")
 
-        DEMO_START
+        DEMO_END
 
     ;
     ; invalid format of the key (corrupted)

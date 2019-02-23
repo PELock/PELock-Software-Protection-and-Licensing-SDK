@@ -2,7 +2,7 @@
 ;³                                                                                            ³
 ;³ PELock plik naglowkowy                                                                     ³
 ;³                                                                                            ³
-;³ Wersja         : PELock v2.0                                                               ³
+;³ Wersja         : PELock v2.09                                                              ³
 ;³ Jezyk          : win32asm / MASM                                                           ³
 ;³ Autor          : Bartosz Wójcik (support@pelock.com)                                       ³
 ;³ Strona domowa  : https://www.pelock.com                                                    ³
@@ -66,6 +66,23 @@ GetKeyStatus proc near
 	ret
 
 GetKeyStatus endp
+
+;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;
+; czy klucz jest zablokowany na sprzetowy identyfikator
+;
+;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+IsKeyHardwareIdLocked proc
+
+	push	128
+	push	0
+	push	-24
+	call	GetWindowText
+
+	ret
+
+IsKeyHardwareIdLocked endp
 
 ;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 ;
