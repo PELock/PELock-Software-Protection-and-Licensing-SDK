@@ -49,4 +49,7 @@ PELock has a built-in binder for additional application DLL libraries, it's poss
 If your application uses or requires an additional DLL libraries you can hide them inside the protected application, no third party will be able to view it, nor any other program will have access to it, because the whole loading process is emulated in the memory and nothing is written to disk, and it's completely transparent to the application working.
 
 Bartosz Wójcik
-https://www.pelock.com
+
+* Visit my site at — https://www.pelock.com
+* Twitter — https://twitter.com/PELock
+* GitHub — https://github.com/PELock
